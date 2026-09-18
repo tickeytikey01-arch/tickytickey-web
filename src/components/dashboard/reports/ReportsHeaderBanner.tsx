@@ -63,7 +63,7 @@ export default function ReportsHeaderBanner({
           {/* Mascot Asset */}
           <div className="relative w-20 sm:w-24 h-20 sm:h-24 flex-shrink-0">
             <Image
-              src="/assets/dashboard-banner-right.png"
+              src="/assets/dashboard-banner-right.webp"
               alt="Dr. Ticky Mascot"
               fill
               className="object-contain"

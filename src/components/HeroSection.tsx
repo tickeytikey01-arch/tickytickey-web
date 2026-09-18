@@ -10,7 +10,7 @@ export default function HeroSection() {
 
   return (
     <>
-      <section className="relative overflow-hidden bg-[#eef6ee] bg-[url('/assets/hero-background.png')] bg-cover bg-top sm:bg-center bg-no-repeat min-h-[660px] lg:min-h-[760px] flex items-center pt-8 pb-16 lg:py-20">
+      <section className="relative overflow-hidden bg-[#eef6ee] bg-[url('/assets/hero-background.webp')] bg-cover bg-top sm:bg-center bg-no-repeat min-h-[660px] lg:min-h-[760px] flex items-center pt-8 pb-16 lg:py-20">
         {/* Subtle decorative background gradient overlay to guarantee text readability */}
         <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/50 to-transparent lg:to-transparent pointer-events-none" />
 
@@ -113,7 +113,7 @@ export default function HeroSection() {
                   {/* Mascot Sprout Doctor */}
                   <div className="relative w-28 h-32 sm:w-36 sm:h-40 filter drop-shadow-md">
                     <Image
-                      src="/assets/mascot.png"
+                      src="/assets/mascot.webp"
                       alt="Ticky - Barangay Health Mascot"
                       fill
                       priority
@@ -125,7 +125,7 @@ export default function HeroSection() {
                 {/* Laptop Asset (Dashboard) */}
                 <div className="relative z-10 w-full drop-shadow-2xl transition-transform duration-300 hover:scale-[1.01]">
                   <Image
-                    src="/assets/laptop-asset.png"
+                    src="/assets/laptop-asset.webp"
                     alt="TickyTICKEY Barangay Admin Dashboard on Laptop"
                     width={1536}
                     height={1024}
@@ -137,7 +137,7 @@ export default function HeroSection() {
                 {/* Mobile Asset (Resident App) Overlapping in front */}
                 <div className="absolute -bottom-4 sm:-bottom-6 -left-2 sm:left-6 md:left-8 z-30 w-[170px] sm:w-[210px] md:w-[240px] lg:w-[260px] drop-shadow-2xl transition-transform duration-300 hover:scale-[1.03]">
                   <Image
-                    src="/assets/mobile.png"
+                    src="/assets/mobile.webp"
                     alt="TickyTICKEY Resident Health App on Mobile Phone"
                     width={1024}
                     height={1536}

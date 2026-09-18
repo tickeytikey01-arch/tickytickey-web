@@ -44,7 +44,7 @@ export default function MedicalDisclaimerBanner({ onEditDisclaimer }: Disclaimer
 
           <div className="relative w-14 h-14 sm:w-16 sm:h-16 flex-shrink-0">
             <Image
-              src="/assets/dashboard-banner-right.png"
+              src="/assets/dashboard-banner-right.webp"
               alt="Mascot"
               fill
               className="object-contain"

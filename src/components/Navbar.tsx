@@ -40,7 +40,7 @@ export default function Navbar({ onOpenSearch }: NavbarProps) {
           <Link href="/" className="flex items-center gap-2 flex-shrink-0 group">
             <div className="relative h-12 w-44 sm:h-14 sm:w-52 transition-transform duration-200 group-hover:scale-[1.02]">
               <Image
-                src="/assets/logo-header.png"
+                src="/assets/logo-header.webp"
                 alt="TickyTICKEY - Your Barangay Health Partner"
                 fill
                 priority

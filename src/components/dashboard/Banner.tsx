@@ -65,7 +65,7 @@ export default function Banner({
         {/* 1. Left foliage: anchored to left, responsive width */}
         <div className="absolute left-0 bottom-0 top-0 h-full w-[80px] sm:w-[130px] lg:w-[170px] pointer-events-none select-none z-0 opacity-40 sm:opacity-100">
           <Image
-            src="/assets/dashboard-banner-left.png"
+            src="/assets/dashboard-banner-left.webp"
             alt=""
             fill
             priority
@@ -76,7 +76,7 @@ export default function Banner({
         {/* 2. Right artwork: mascot with heart & right foliage */}
         <div className="absolute right-0 bottom-0 top-0 h-full w-[150px] sm:w-[220px] md:w-[270px] lg:w-[320px] pointer-events-none select-none z-0">
           <Image
-            src="/assets/dashboard-banner-right.png"
+            src="/assets/dashboard-banner-right.webp"
             alt="Ticky Sprout Mascot"
             fill
             priority

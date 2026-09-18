@@ -63,7 +63,7 @@ export default function KeyInsightsCard({ items }: { items?: string[] }) {
           {/* Dr. Ticky Mascot */}
           <div className="relative w-28 h-28">
             <Image
-              src="/assets/dashboard-banner-right.png"
+              src="/assets/dashboard-banner-right.webp"
               alt="Dr. Ticky Mascot"
               fill
               className="object-contain"

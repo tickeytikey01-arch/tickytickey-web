@@ -65,7 +65,7 @@ export default function Sidebar({
             <Link href="/" className="inline-block group px-1">
               <div className="relative h-16 sm:h-20 w-48 sm:w-52 transition-transform group-hover:scale-102">
                 <Image
-                  src="/assets/logo-header.png"
+                  src="/assets/logo-header.webp"
                   alt="TickyTICKEY Logo"
                   fill
                   priority
@@ -114,10 +114,10 @@ export default function Sidebar({
 
       {/* Bottom Mascot Graphic - pushed naturally to the bottom of the sidebar */}
       <div className="relative w-full mt-auto pt-2 select-none flex flex-col items-center">
-        {/* Mascot watercolor artwork from dashboard-sidebar.png filling naturally without any container card */}
+        {/* Mascot watercolor artwork from dashboard-sidebar.webp filling naturally without any container card */}
         <div className="relative w-full h-56 sm:h-64">
           <Image
-            src="/assets/dashboard-sidebar.png"
+            src="/assets/dashboard-sidebar.webp"
             alt="Ticky Sprout Mascot"
             fill
             priority

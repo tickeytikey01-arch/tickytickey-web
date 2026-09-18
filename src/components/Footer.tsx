@@ -16,7 +16,7 @@ export default function Footer() {
           <div className="lg:col-span-2 space-y-5">
             <div className="relative h-14 w-56">
               <Image
-                src="/assets/logo-header.png"
+                src="/assets/logo-header.webp"
                 alt="TickyTICKEY Logo"
                 fill
                 className="object-contain object-left"
@@ -30,7 +30,7 @@ export default function Footer() {
             <div className="flex items-center gap-3 pt-1">
               <div className="relative w-12 h-12 rounded-2xl overflow-hidden shadow-md">
                 <Image
-                  src="/assets/app-icon.png"
+                  src="/assets/app-icon.webp"
                   alt="TickyTICKEY App Icon"
                   fill
                   className="object-cover"

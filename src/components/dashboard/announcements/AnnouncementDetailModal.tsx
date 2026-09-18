@@ -50,7 +50,7 @@ export default function AnnouncementDetailModal({
             <div className="flex items-center justify-between text-[11px] text-gray-400">
               <div className="flex items-center gap-1.5 font-bold text-[#1b552b]">
                 <div className="w-4 h-4 relative">
-                  <Image src="/assets/app-icon.png" alt="App" fill className="object-contain" />
+                  <Image src="/assets/app-icon.webp" alt="App" fill className="object-contain" />
                 </div>
                 <span>TickyTICKEY • San Isidro</span>
               </div>
@@ -82,7 +82,7 @@ export default function AnnouncementDetailModal({
             <div className="p-3 bg-[#edf7ee] rounded-xl border border-green-200 flex items-center gap-3">
               <div className="relative w-10 h-10 flex-shrink-0">
                 <Image
-                  src="/assets/dashboard-banner-right.png"
+                  src="/assets/dashboard-banner-right.webp"
                   alt="Mascot"
                   fill
                   className="object-contain"

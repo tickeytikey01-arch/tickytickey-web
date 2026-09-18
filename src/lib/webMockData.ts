@@ -65,7 +65,7 @@ export const MOCK_DASHBOARD_DATA: DashboardData = {
         name: "Ana Reyes (BHW)",
         role: "Purok 2 Health Worker",
         phone: "0928-123-4567",
-        avatar: "/assets/female-doctor.png",
+        avatar: "/assets/female-doctor.webp",
       },
       conversation: [
         {
@@ -113,7 +113,7 @@ export const MOCK_DASHBOARD_DATA: DashboardData = {
         name: "Marites Dela Cruz (BHW)",
         role: "Purok 1 Health Worker",
         phone: "0919-444-1122",
-        avatar: "/assets/female-doctor.png",
+        avatar: "/assets/female-doctor.webp",
       },
       conversation: [
         {
@@ -154,7 +154,7 @@ export const MOCK_DASHBOARD_DATA: DashboardData = {
         name: "Ana Reyes (BHW)",
         role: "Purok 2 Health Worker",
         phone: "0928-123-4567",
-        avatar: "/assets/female-doctor.png",
+        avatar: "/assets/female-doctor.webp",
       },
       conversation: [
         {
@@ -195,7 +195,7 @@ export const MOCK_DASHBOARD_DATA: DashboardData = {
         name: "Elena Cruz (BHW)",
         role: "Purok 4 Health Worker",
         phone: "0922-333-8899",
-        avatar: "/assets/female-doctor.png",
+        avatar: "/assets/female-doctor.webp",
       },
       conversation: [
         {
@@ -229,7 +229,7 @@ export const MOCK_DASHBOARD_DATA: DashboardData = {
         name: "Midwife May Castro",
         role: "Barangay Health Midwife",
         phone: "0917-888-2233",
-        avatar: "/assets/female-doctor.png",
+        avatar: "/assets/female-doctor.webp",
       },
       conversation: [
         {
@@ -270,7 +270,7 @@ export const MOCK_DASHBOARD_DATA: DashboardData = {
         name: "Ana Reyes (BHW)",
         role: "Purok 2 Health Worker",
         phone: "0928-123-4567",
-        avatar: "/assets/female-doctor.png",
+        avatar: "/assets/female-doctor.webp",
       },
       conversation: [
         {
@@ -881,7 +881,7 @@ export const MOCK_ADMIN_RESOURCES: AdminResources = {
       station: "Barangay San Antonio Health Station",
       status: "Active",
       lastActive: "Just now",
-      avatar: "/assets/doctor.png",
+      avatar: "/assets/doctor.webp",
       licenseNumber: "PRC-0114892",
       philHealthId: "PH-12-0048192-1",
       assignedCasesCount: 14,
@@ -897,7 +897,7 @@ export const MOCK_ADMIN_RESOURCES: AdminResources = {
       station: "Barangay San Antonio Health Station",
       status: "Active",
       lastActive: "15 mins ago",
-      avatar: "/assets/female-doctor.png",
+      avatar: "/assets/female-doctor.webp",
       licenseNumber: "PRC-0089124",
       philHealthId: "PH-12-0099412-3",
       assignedCasesCount: 8,
@@ -913,7 +913,7 @@ export const MOCK_ADMIN_RESOURCES: AdminResources = {
       station: "Barangay San Antonio Health Station",
       status: "Active",
       lastActive: "30 mins ago",
-      avatar: "/assets/female-doctor.png",
+      avatar: "/assets/female-doctor.webp",
       licenseNumber: "PRC-0044129",
       philHealthId: "PH-12-0088192-5",
       assignedCasesCount: 6,
@@ -929,7 +929,7 @@ export const MOCK_ADMIN_RESOURCES: AdminResources = {
       station: "Barangay San Antonio Health Station",
       status: "Active",
       lastActive: "5 mins ago",
-      avatar: "/assets/female-doctor.png",
+      avatar: "/assets/female-doctor.webp",
       assignedCasesCount: 12,
       joinedDate: "June 20, 2024",
     },
@@ -943,7 +943,7 @@ export const MOCK_ADMIN_RESOURCES: AdminResources = {
       station: "Barangay San Antonio Health Station",
       status: "Active",
       lastActive: "1 hour ago",
-      avatar: "/assets/female-doctor.png",
+      avatar: "/assets/female-doctor.webp",
       assignedCasesCount: 10,
       joinedDate: "June 20, 2024",
     },
@@ -957,7 +957,7 @@ export const MOCK_ADMIN_RESOURCES: AdminResources = {
       station: "Barangay San Antonio ICT Desk",
       status: "Active",
       lastActive: "10 mins ago",
-      avatar: "/assets/man.png",
+      avatar: "/assets/man.webp",
       assignedCasesCount: 0,
       joinedDate: "January 10, 2024",
     },
@@ -971,7 +971,7 @@ export const MOCK_ADMIN_RESOURCES: AdminResources = {
       station: "Barangay San Antonio",
       status: "Active",
       lastActive: "10 mins ago",
-      avatar: "/assets/female-user.png",
+      avatar: "/assets/female-user.webp",
       philHealthId: "12-345678901-2",
       assignedCasesCount: 1,
       joinedDate: "July 12, 2024",
@@ -986,7 +986,7 @@ export const MOCK_ADMIN_RESOURCES: AdminResources = {
       station: "Barangay San Antonio",
       status: "Active",
       lastActive: "25 mins ago",
-      avatar: "/assets/man.png",
+      avatar: "/assets/man.webp",
       philHealthId: "09-876543210-9",
       assignedCasesCount: 1,
       joinedDate: "August 4, 2024",

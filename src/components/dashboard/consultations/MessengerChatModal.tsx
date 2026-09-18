@@ -146,7 +146,7 @@ export default function MessengerChatModal({
     name: activeConsultation.assignedBHW || "Ana Reyes",
     role: "Barangay Health Worker",
     phone: "0928 765 4321",
-    avatar: "/assets/doctor.png",
+    avatar: "/assets/doctor.webp",
   };
 
   const conversation = activeConsultation.conversation || [];

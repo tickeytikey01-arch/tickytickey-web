@@ -73,11 +73,11 @@ export default function LoginPage() {
           {/* LEFT COLUMN: Dedicated Transparent Container with login-asset */}
           <div className="lg:col-span-6 xl:col-span-6 flex flex-col justify-between relative rounded-3xl overflow-hidden">
             
-            {/* Separate Transparent Background Container displaying login-asset.png covering the bottom */}
+            {/* Separate Transparent Background Container displaying login-asset.webp covering the bottom */}
             <div className="absolute inset-0 pointer-events-none z-0 select-none overflow-hidden">
               <div className="absolute bottom-0 left-0 right-0 h-[360px] sm:h-[420px] lg:h-[470px] w-full">
                 <Image
-                  src="/assets/login-asset.png"
+                  src="/assets/login-asset.webp"
                   alt="TickyTICKEY Barangay Health Mascot and Community"
                   fill
                   priority
@@ -101,7 +101,7 @@ export default function LoginPage() {
                 <Link href="/" className="inline-block group">
                   <div className="relative h-14 w-52 sm:h-16 sm:w-60 transition-transform group-hover:scale-105">
                     <Image
-                      src="/assets/logo-header.png"
+                      src="/assets/logo-header.webp"
                       alt="TickyTICKEY - Your Barangay Health Partner"
                       fill
                       priority
@@ -217,7 +217,7 @@ export default function LoginPage() {
                   <div className="flex items-center gap-3.5 pb-2">
                     <div className="relative w-12 h-12 flex-shrink-0">
                       <Image
-                        src="/assets/mascot.png"
+                        src="/assets/mascot.webp"
                         alt="Ticky"
                         fill
                         className="object-contain"

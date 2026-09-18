@@ -24,7 +24,7 @@ export default function AssignBhwModal({
       role: "Barangay Health Worker (BHW)",
       phone: "0928 765 4321",
       assignedPurok: "Purok 1 & 3",
-      avatar: "/assets/doctor.png",
+      avatar: "/assets/doctor.webp",
       status: "Available",
     },
     {
@@ -32,7 +32,7 @@ export default function AssignBhwModal({
       role: "Barangay Health Worker (BHW)",
       phone: "0929 111 2233",
       assignedPurok: "Purok 2 & 5",
-      avatar: "/assets/doctor.png",
+      avatar: "/assets/doctor.webp",
       status: "Available",
     },
     {
@@ -40,7 +40,7 @@ export default function AssignBhwModal({
       role: "Barangay Nutrition Scholar (BNS)",
       phone: "0920 555 6677",
       assignedPurok: "Purok 4 & 6",
-      avatar: "/assets/doctor.png",
+      avatar: "/assets/doctor.webp",
       status: "On Duty",
     },
     {
@@ -48,7 +48,7 @@ export default function AssignBhwModal({
       role: "Visiting Municipal Physician",
       phone: "0917 888 9911",
       assignedPurok: "Central Health Center",
-      avatar: "/assets/doctor.png",
+      avatar: "/assets/doctor.webp",
       status: "In Clinic",
     },
   ];

@@ -11,7 +11,7 @@ export default function StakeholdersSection() {
       subtitle: "Kababayan Health Made Simple",
       description:
         "Every household gains direct mobile access to free clinic bookings, vaccination reminders, maintenance medicine requests, and family health folders.",
-      asset: "/assets/family-asset.png",
+      asset: "/assets/family-asset.webp",
       badge: "Mobile App Access",
       highlights: [
         "Check barangay doctor visit schedules",
@@ -27,7 +27,7 @@ export default function StakeholdersSection() {
       subtitle: "Empowering Frontline Caregivers",
       description:
         "Streamlined digital tools to log consultations, manage queues, track home visits, and eliminate repetitive paper forms so you can focus on patient care.",
-      asset: "/assets/doctor.png",
+      asset: "/assets/doctor.webp",
       badge: "Clinical Dashboard",
       highlights: [
         "Rapid patient check-in & vital signs recording",
@@ -43,7 +43,7 @@ export default function StakeholdersSection() {
       subtitle: "Transparent, Data-Driven Governance",
       description:
         "Real-time visibility into disease trends, health center inventory, emergency response times, and program coverage to make informed municipal decisions.",
-      asset: "/assets/man.png",
+      asset: "/assets/man.webp",
       badge: "Executive Oversight",
       highlights: [
         "Live symptom breakdown & outbreak alerts",

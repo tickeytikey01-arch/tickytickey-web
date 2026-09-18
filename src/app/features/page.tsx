@@ -14,7 +14,7 @@ export default function FeaturesPage() {
     {
       title: "Online Consultation",
       tagline: "Teleconsultation for Barangays",
-      asset: "/assets/online-consulation.png",
+      asset: "/assets/online-consulation.webp",
       details:
         "Residents can consult with volunteer barangay physicians and health workers from the comfort of their home. Avoid crowded waiting rooms while receiving preliminary triage, health advice, and medical certificates.",
       benefits: [
@@ -26,7 +26,7 @@ export default function FeaturesPage() {
     {
       title: "Appointment Scheduling",
       tagline: "Organized Clinic Operations",
-      asset: "/assets/appointment.png",
+      asset: "/assets/appointment.webp",
       details:
         "No more waking up at 4:00 AM to line up for clinic numbers. Residents book prioritized slots for prenatal checkups, infant vaccinations, dental missions, and blood pressure monitoring.",
       benefits: [
@@ -38,7 +38,7 @@ export default function FeaturesPage() {
     {
       title: "Medicine Library & Request",
       tagline: "Transparent Medicine Inventory",
-      asset: "/assets/medicine.png",
+      asset: "/assets/medicine.webp",
       details:
         "Check which free maintenance medicines (hypertension, diabetes, antibiotics, vitamins) are currently available in the Barangay Health Center before visiting.",
       benefits: [
@@ -50,7 +50,7 @@ export default function FeaturesPage() {
     {
       title: "Digital Health Records",
       tagline: "Lifetime Barangay Health Card",
-      asset: "/assets/health-records.png",
+      asset: "/assets/health-records.webp",
       details:
         "Replace damaged paper folders with encrypted cloud records. Health workers and visiting doctors can instantly see allergies, chronic conditions, and past vital signs.",
       benefits: [
@@ -62,7 +62,7 @@ export default function FeaturesPage() {
     {
       title: "Emergency Assistance",
       tagline: "One-Tap Barangay SOS",
-      asset: "/assets/emergency-help.png",
+      asset: "/assets/emergency-help.webp",
       details:
         "In critical situations, press one button to alert the Barangay Emergency Response Team (BDRRMO), sending GPS location and vital medical information directly to dispatch.",
       benefits: [
@@ -74,7 +74,7 @@ export default function FeaturesPage() {
     {
       title: "Barangay Health Analytics",
       tagline: "Epidemiological Surveillance",
-      asset: "/assets/reports.png",
+      asset: "/assets/reports.webp",
       details:
         "Give Barangay Captains and the Municipal Health Office instant visibility into disease surges (dengue, flu, measles) so preventive action can be taken immediately.",
       benefits: [

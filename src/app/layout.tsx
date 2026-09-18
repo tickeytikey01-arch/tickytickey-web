@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   title: "TickyTICKEY | Your Barangay Health Partner",
   description: "TickyTICKEY connects residents, Barangay Health Workers, and local leaders through easy access to health services, information, and care.",
   icons: {
-    icon: "/assets/app-icon.png",
+    icon: "/assets/app-icon.webp",
   },
 };
 

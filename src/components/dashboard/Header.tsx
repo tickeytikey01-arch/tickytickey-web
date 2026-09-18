@@ -65,7 +65,7 @@ export default function Header({
   const [profileDropdownOpen, setProfileDropdownOpen] = useState(false);
   const [supportModalOpen, setSupportModalOpen] = useState(false);
 
-  const activeUser: UserAccount = { id: "current", name: adminName, role, avatar: "/assets/doctor.png" };
+  const activeUser: UserAccount = { id: "current", name: adminName, role, avatar: "/assets/doctor.webp" };
 
   const dropdownRef = useRef<HTMLDivElement>(null);
   const searchContainerRef = useRef<HTMLDivElement>(null);

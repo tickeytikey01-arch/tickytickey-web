@@ -59,7 +59,7 @@ export async function getDashboardData(): Promise<DashboardData> {
       concern: item.concern, chiefComplaint: item.concern, symptoms: item.symptoms, additionalNotes: item.notes ?? undefined,
       status: titleCase(item.status) as ConsultationItem["status"], priority: titleCase(item.priority) as ConsultationItem["priority"], assignedBHW: staffName,
       timeAgo: relativeTime(item.created_at), createdDate: new Date(item.created_at).toLocaleString("en-PH"),
-      bhwDetails: item.staff ? { name: staffName, role: titleCase(item.staff.role), phone: item.staff.mobile ?? "", avatar: "/assets/doctor.png" } : undefined,
+      bhwDetails: item.staff ? { name: staffName, role: titleCase(item.staff.role), phone: item.staff.mobile ?? "", avatar: "/assets/doctor.webp" } : undefined,
       conversation: (messagesByConsultation.get(item.id) ?? []).map((message) => ({ id: message.id, sender: message.sender?.role === "resident" ? "resident" : "bhw", senderName: message.sender?.full_name ?? "Health Partner", text: message.body, timestamp: new Date(message.created_at).toLocaleTimeString("en-PH", { hour: "2-digit", minute: "2-digit" }) })),
     };
   });
