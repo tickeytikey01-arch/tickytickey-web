@@ -3,6 +3,7 @@
 import { ConsultationItem } from "@/types/dashboard";
 import {
   AlertTriangle,
+  CheckCircle2,
   ChevronLeft,
   ChevronRight,
   Clock,
@@ -12,6 +13,7 @@ import {
   MapPin,
   MessageSquare,
   Phone,
+  PlayCircle,
   Stethoscope,
   User,
 } from "lucide-react";
@@ -30,6 +32,7 @@ export default function ConsultationDetailsCard({
   allConsultations,
   onSelectConsultationId,
   onViewProfile,
+  onStatusChange,
   onOpenChatModal,
 }: DetailsProps) {
   const getPriorityStyle = (priority?: string) => {
@@ -200,7 +203,13 @@ export default function ConsultationDetailsCard({
               )}`}
             >
               <Clock className="w-3 h-3" />
-              <span>{consultation.status}</span>
+              <span>
+                {consultation.status === "Waiting"
+                  ? "Pending"
+                  : consultation.status === "Active"
+                  ? "Responding"
+                  : consultation.status}
+              </span>
             </span>
           </div>
 
@@ -211,6 +220,76 @@ export default function ConsultationDetailsCard({
               <User className="w-3 h-3 text-[#246b38] flex-shrink-0" />
               <span className="truncate">{consultation.assignedBHW || "Ana Reyes"}</span>
             </div>
+          </div>
+        </div>
+
+        {/* Triage Status Pipeline Action Bar (Pending → Responding → Resolved) */}
+        <div className="p-3 rounded-2xl bg-white border border-gray-100 flex flex-wrap items-center justify-between gap-2 shadow-2xs">
+          <div className="flex items-center gap-2">
+            <span className="text-[11px] font-bold text-gray-500 uppercase tracking-wider">
+              Triage Stage:
+            </span>
+            <span
+              className={`inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-bold border ${getStatusStyle(
+                consultation.status
+              )}`}
+            >
+              <Clock className="w-3 h-3" />
+              <span>
+                {consultation.status === "Waiting"
+                  ? "Pending Triage"
+                  : consultation.status === "Active"
+                  ? "Responding / In Progress"
+                  : consultation.status}
+              </span>
+            </span>
+          </div>
+
+          <div className="flex items-center gap-2">
+            {/* Quick Advance Button */}
+            {consultation.status === "Waiting" && onStatusChange && (
+              <button
+                type="button"
+                onClick={() => onStatusChange(consultation.id, "Active")}
+                className="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition-all shadow-xs cursor-pointer"
+                title="Advance to Responding"
+              >
+                <PlayCircle className="w-3.5 h-3.5" />
+                <span>Mark Responding</span>
+              </button>
+            )}
+
+            {(consultation.status === "Active" || consultation.status === "Replied") && onStatusChange && (
+              <button
+                type="button"
+                onClick={() => onStatusChange(consultation.id, "Resolved")}
+                className="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-purple-600 hover:bg-purple-700 text-white text-xs font-bold transition-all shadow-xs cursor-pointer"
+                title="Mark as Resolved"
+              >
+                <CheckCircle2 className="w-3.5 h-3.5" />
+                <span>Mark Resolved</span>
+              </button>
+            )}
+
+            {/* Manual Status Dropdown */}
+            {onStatusChange && (
+              <select
+                value={consultation.status}
+                aria-label="Change Consultation Status"
+                onChange={(e) =>
+                  onStatusChange(
+                    consultation.id,
+                    e.target.value as ConsultationItem["status"]
+                  )
+                }
+                className="text-xs font-bold text-gray-700 bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-xl px-2.5 py-1 focus:outline-none focus:ring-1 focus:ring-green-500 cursor-pointer"
+              >
+                <option value="Waiting">Pending (Waiting)</option>
+                <option value="Active">Responding (Active)</option>
+                <option value="Replied">Replied</option>
+                <option value="Resolved">Resolved</option>
+              </select>
+            )}
           </div>
         </div>
 
