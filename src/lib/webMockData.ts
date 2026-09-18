@@ -949,7 +949,7 @@ export const MOCK_ADMIN_RESOURCES: AdminResources = {
     },
     {
       id: "usr-6",
-      name: "Richmond Constante",
+      name: "TickyTICKEY ICT Admin",
       role: "Admin",
       email: "tickeytikey01@gmail.com",
       phone: "0920-555-6677",
