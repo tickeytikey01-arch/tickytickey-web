@@ -33,62 +33,24 @@ export default function LoginPage() {
   const [errorMessage, setErrorMessage] = useState("");
   const [forgotPasswordOpen, setForgotPasswordOpen] = useState(false);
 
-  const handleQuickFillAdmin = () => {
-    setEmailOrUser("admin@tickytickey.ph");
-    setPassword("Admin@123456");
-    setErrorMessage("");
-  };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (isSubmitting) return;
     setIsSubmitting(true);
     setErrorMessage("");
     try {
+      const supabase = createClient();
       const identifier = emailOrUser.trim();
-      let resolvedIdentifier = identifier;
-      if (identifier.toLowerCase() === "admin") {
-        resolvedIdentifier = "admin@tickytickey.ph";
-      }
-
-      const isDefaultAdmin =
-        (resolvedIdentifier.toLowerCase() === "admin@tickytickey.ph" ||
-         resolvedIdentifier.toLowerCase() === "tickeytikey01@gmail.com" ||
-         identifier.toLowerCase() === "admin") &&
-        (password === "Admin@123456" || password === "admin123");
-
-      try {
-        const supabase = createClient();
-        const credentials = resolvedIdentifier.includes("@")
-          ? { email: resolvedIdentifier.toLowerCase(), password }
-          : { phone: resolvedIdentifier.replace(/\s/g, "").replace(/^0/, "+63"), password };
-        const { error } = await supabase.auth.signInWithPassword(credentials);
-        if (error) {
-          if (isDefaultAdmin) {
-            document.cookie = "tickytickey_admin_session=true; path=/; max-age=86400; SameSite=Lax";
-            localStorage.setItem("tickytickey_admin_logged_in", "true");
-            setIsSubmitted(true);
-            router.replace("/dashboard");
-            router.refresh();
-            return;
-          }
-          throw error;
-        }
-        document.cookie = "tickytickey_admin_session=true; path=/; max-age=86400; SameSite=Lax";
-        setIsSubmitted(true);
-        router.replace("/dashboard");
-        router.refresh();
-      } catch (authError) {
-        if (isDefaultAdmin) {
-          document.cookie = "tickytickey_admin_session=true; path=/; max-age=86400; SameSite=Lax";
-          localStorage.setItem("tickytickey_admin_logged_in", "true");
-          setIsSubmitted(true);
-          router.replace("/dashboard");
-          router.refresh();
-          return;
-        }
-        throw authError;
-      }
+      const credentials = identifier.includes("@")
+        ? { email: identifier.toLowerCase(), password }
+        : identifier.toLowerCase() === "admin"
+        ? { email: "admin@tickytickey.ph", password }
+        : { phone: identifier.replace(/\s/g, "").replace(/^0/, "+63"), password };
+      const { error } = await supabase.auth.signInWithPassword(credentials);
+      if (error) throw error;
+      setIsSubmitted(true);
+      router.replace("/dashboard");
+      router.refresh();
     } catch (error) {
       setErrorMessage(error instanceof Error ? error.message : "Sign in failed. Please try again.");
     } finally {
@@ -271,25 +233,6 @@ export default function LoginPage() {
                     </div>
                   </div>
 
-                  {/* Default Admin Quick Credentials Helper */}
-                  <div className="p-3 bg-emerald-50/90 border border-emerald-200/80 rounded-2xl flex items-center justify-between text-xs transition-all shadow-2xs">
-                    <div className="flex flex-col">
-                      <div className="flex items-center gap-1.5 font-bold text-emerald-950">
-                        <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
-                        <span>Default Admin Account</span>
-                      </div>
-                      <div className="text-[11px] text-emerald-700 font-mono mt-0.5">
-                        admin@tickytickey.ph • <span className="font-sans text-gray-500">pass:</span> Admin@123456
-                      </div>
-                    </div>
-                    <button
-                      type="button"
-                      onClick={handleQuickFillAdmin}
-                      className="px-3 py-1.5 bg-emerald-600 hover:bg-emerald-700 active:scale-95 text-white rounded-xl font-bold text-xs transition-all shadow-2xs flex items-center gap-1"
-                    >
-                      <span>⚡ Quick Fill</span>
-                    </button>
-                  </div>
 
                   {/* Email or Username Input */}
                   <div className="space-y-1.5">
