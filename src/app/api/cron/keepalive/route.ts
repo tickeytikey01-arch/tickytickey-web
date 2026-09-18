@@ -9,7 +9,7 @@ export const dynamic = "force-dynamic";
  *
  * Prevents Supabase Free Tier projects from pausing after 7 days of inactivity.
  * Triggered automatically by:
- * 1. Vercel Cron (/api/cron/keepalive every 6 hours via vercel.json)
+ * 1. Vercel Cron (/api/cron/keepalive daily at 00:00 UTC via vercel.json)
  * 2. Client-side heartbeat while dashboard/web portal is open (every 5 mins)
  * 3. External uptime monitors (e.g. UptimeRobot, Cron-job.org)
  */
