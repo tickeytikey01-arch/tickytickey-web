@@ -1,5 +1,6 @@
 import CookieConsentBanner from "@/components/CookieConsentBanner";
 import SmoothScroll from "@/components/SmoothScroll";
+import KeepAliveHeartbeat from "@/components/KeepAliveHeartbeat";
 import type { Metadata } from "next";
 import { Caveat, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
@@ -32,6 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${plusJakarta.variable} ${caveat.variable}`}>
       <body className="font-sans antialiased text-gray-800 bg-[#fbfdfa] min-h-screen selection:bg-[#e2f3e5] selection:text-[#184e27]">
+        <KeepAliveHeartbeat />
         <SmoothScroll>
           {children}
         </SmoothScroll>

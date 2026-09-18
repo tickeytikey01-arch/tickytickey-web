@@ -371,7 +371,15 @@ export default function Header({
                   <button
                     type="button"
                     onClick={async () => {
-                      await createClient().auth.signOut();
+                      document.cookie = "tickytickey_admin_session=; path=/; max-age=0; SameSite=Lax";
+                      if (typeof window !== "undefined") {
+                        localStorage.removeItem("tickytickey_admin_logged_in");
+                      }
+                      try {
+                        await createClient().auth.signOut();
+                      } catch {
+                        // ignore signOut failure in offline mode
+                      }
                       router.replace("/login");
                       router.refresh();
                     }}
